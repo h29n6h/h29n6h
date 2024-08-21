@@ -1,0 +1,163 @@
+
+ISYS90038 Assignment 1 Case Study
+University of Melbourne 2024 1
+Stitching Together a Digital Future
+Milano Mera is a renowned Italian fashion house known for its high-
+quality, handcrafted garments. They operate several high-quality
+manufacturing facilities in all the high fashion areas worldwide
+including Milano, Paris, New York, and Tokyo. They source their
+fabrics from Egypt (cotton), Australia and Scotland (wool), China
+(silk and cashmere) and Japan (kimono silk). As with all firms in
+the fashion industry, they are concerned with their reputation
+around issues such as sustainability, counterfeited cheap
+knockoffs, labour exploitation (especially in its fabric suppliers),
+and the rise of fast fashion.
+Over the past 3 years, Milano Mera has been experiencing a downturn in its market share, as it
+struggles to keep pace with the fast-changing fashion landscape. Milano’s IT infrastructure, its
+networks, machines and software were designed in the mid-90s and the systems and infrastructure
+are well past their end of life. Their legacy systems, built for a bygone era, are proving to be a
+significant roadblock to success. Subsequently, Milano Mera is missing sales opportunities due to
+stock issues, is dealing with frustrated retailers, and is experiencing disconnect between its creative
+vision and digital execution. Milano Mera has lost its competitive edge, as consumer demands shift
+towards a more data-driven and personalised shopping experience.
+A little over 2 years ago the CIO at the time Justin Shanks endeavoured to orchestrate a technological
+renaissance. He proposed a comprehensive IT modernisation plan to senior management. Below is
+an extract from the meeting between Justin and the management team.
+Justin, the CIO, stood before the management team, his presentation complete. A tense silence hung
+in the air. “So,” began Angus, the Marketing Manager, “you're asking for a significant budget increase
+to essentially buy new computers and some fancy software. How exactly will this translate to more
+sales?”
+Justin sighed inwardly. “It's not just new computers, Angus,” he explained patiently. “Our current
+infrastructure can't handle the demands of real-time data analysis. We need a system that integrates
+with our sales channels and marketing tools. Think of it as giving you a clear view of what's happening,
+what customers want, and how to reach them effectively.”
+A sceptical look crossed the CFO, Ang's face as she thought to herself, “Here we go again, IT wants
+more money, I wish they could help us increase our profits”. Out loud she said, “Real-time data?
+Sounds like a lot of bells and whistles. Can't we just get by with what we have for now? What’s the
+real value proposition?” The other managers murmured in agreement. Justin felt a pang of frustration.
+Without a modern IT代做 ISYS90038、Python/c++程序语言代写 foundation, their ambitious growth plans were little more than wishful thinking.
+He knew he needed to find a way to bridge the communication gap and convince them of the long-
+term benefits of this investment.
+ISYS90038 Assignment 1 Case Study
+? University of Melbourne 2024 2
+So, for the organisation it was business as usual. Justin was successful in getting some funds to
+maintain the existing aging infrastructure and to start work on revitalising Milano Mera’s IT systems,
+but did not make any real progress. It wasn’t until nearly 2 years after Justin’s failed attempt at
+business transformation that the business was finding itself in trouble…
+“What do you mean we are losing market share”, CEO, Wimonrat Bhakdijit frustratingly said to Angus
+Ruffnut, the Marketing Manager during their fortnightly catch-up meeting. The CFO, Ang chimed in,
+“We have overspent in IT over the last 2 years, it’s costing us a fortune!”. Angus replied, “Yeah, I
+know, what a mess IT is, the computers can’t handle what we do anymore, I am constantly redoing
+tasks as things freeze, and don’t work a third of the time, or I am waiting for slow responses the other
+two-thirds of the time.”
+Now, 2 years after Justin’s technological renaissance
+presentation to senior management he was asked to meet
+the CEO. At the meeting, Wimonrat asked for his
+resignation over the IT “mess” that he was managing.
+Wimonrat was already sending feelers out into industry,
+looking for Justin’s replacement.
+A new digitally adept CIO, Sophi Rossi, was headhunted
+from Milano Mera’s arch-rival, Gucci. Sophia, a digital
+native, had a proven track record in fashion and a strong
+record as an IT leader. As part of Sophia’s role, she was
+directed to investigate the current state of Milano Mera’s IT
+capabilities to figure out why the changes instigated by the
+previous CIO were ineffective.
+During her investigation, Sophia discovered that her predecessor (Justin) tried to conduct an
+infrastructure renewal program within the organisation, but the project was over budget and already
+6 months over time. Her investigation showed that despite multiple attempts to involve business
+leaders more in the IT decisions, Justin was unable to gain agreement from the business for the
+initiatives that he was driving. Subsequently, he found it difficult to progress with updating Milano
+Mera’s systems and fixing the ailing infrastructure.
+As a result of the difficulties in improving the infrastructure, Sophia found that Justin fell into a
+business-as-usual, maintenance mode where he was just keeping the organisation’s “lights on”. Most
+funds allocated to IT were effectively spent on maintaining the status quo, without any funding being
+set aside for new IT initiatives in the organisation. Funding issues also caused the organisation’s IT
+function to cut staff, as they couldn’t afford to both maintain the status quo, as well as keeping staffing
+levels up to requirements. The IT function was now severely understaffed and had no capacity for
+anything else other than keeping the current systems running as well as doing minor bug fixes on
+these systems.
+Interestingly, Sophia also identified a set of minutes from a meeting between IT and the business
+leaders that occurred about 12 months previously. The minutes showed that there was a lot of concern
+with the state of IT in the organisation. However, at the time, no one could agree on what to
+accomplish to improve IT in the organisation. There were three principal areas of concern:
+ISYS90038 Assignment 1 Case Study
+ University of Melbourne 2024 3
+1 – The organisation’s IT infrastructure is aging. The
+systems are old, are full of bugs, are inefficient and are
+inflexible. The systems struggle to handle the demands of a
+modern fashion business, hindering core functions like:
+ Inventory Management: Inaccurate inventory data
+leads to stockouts of popular items and overstocked
+items that become dead weight. This frustrates
+retailers who are unable to fulfil customer orders and
+tarnishes Milano Mera's reputation for reliability.
+ Production Planning: Outdated systems make it
+difficult to forecast demand accurately, leading to
+production delays and missed opportunities.
+2 - Lack of Real-Time Data Insights: Milano Mera operates in a data silo, lacking a central platform to
+collect, analyse, and utilise real-time data. This limits their ability to:
+ Identify Customer Trends: Without access to real-time customer behaviour data, Milano
+Mera struggles to understand what their customers genuinely want. This can lead to
+collections that miss the mark and fail to resonate with the target audience.
+ Optimise Marketing Campaigns: They lack the ability to personalise marketing efforts or
+target specific demographics effectively. This results in wasted resources and missed
+opportunities to connect with potential customers.
+3 - Limited Omnichannel Integration: Milano Mera's current IT infrastructure doesn't seamlessly
+integrate with emerging online sales channels. This disconnect creates a fragmented customer
+experience:
+Disjointed Online Presence: The lack of integration between their website and internal
+systems creates a frustrating online shopping experience. Customers may encounter issues
+with product availability, order processing, or returns.
+ Missed Opportunities in E-commerce: Milano Mera is missing out on the booming online
+retail market by failing to provide a seamless and engaging digital experience for customers.
+These IT issues, coupled with the business's initial resistance to digital transformation, have created
+a perfect storm for Milano Mera. To regain their footing and remain relevant in the fast-paced world
+of fashion, they need to prioritise a comprehensive IT modernisation strategy.
+Sophia realises that Milano Mera faces a crucial turning point. The fashion industry is undergoing a
+digital revolution. While competitors embrace online sales, social media marketing and putting
+customers at the centre of everything, Milano Mera has remained hesitant, clinging to its traditional
+brick-and-mortar model.
+The organisation seems to have identified the problems with their current state, and where they can
+move forward, but they have been unable to move from their current state. Sophia realises that it is
+up to her to drive the organisation forward with a good IT strategy.
+ISYS90038 Assignment 1 Case Study
+ University of Melbourne 2024 4
+She writes some notes in her planner:
+ What are the specific business goals for Milano Mera? How are
+the current IT issues hindering these goals? Beyond frustration with
+slow systems, what are the key pain points for different
+departments (marketing, sales, production)?
+ Was there a lack of clear communication of the project's value
+proposition to the business stakeholders? What were the key
+disagreements between IT and the business during the project?
+ Does Milano Mera have a clearly defined digital transformation
+strategy? If not, how can IT best support the business in developing
+one that leverages technology to achieve its goals?? What is the current state of the IT infrastructure? How extensive is the technical debt, and what
+are the immediate risks and long-term implications of not addressing it?
+Does the existing IT team have the skillset and resources needed to implement a comprehensive
+IT modernisation strategy? Are there any critical skill gaps that need to be addressed through
+training or hiring?
+What is the current IT budget, and how does it compare to the projected costs of an IT
+modernisation project? Are there opportunities for cost optimisation within the IT department to
+free up resources for strategic initiatives?
+ How can we create a more collaborative environment where IT and the business work together
+to define priorities and ensure the successful implementation of IT initiatives?
+How can we effectively manage the change process associated with a significant IT
+modernisation project? How can we ensure user adoption and minimise disruption to ongoing
+operations?
+ How will we measure the success of the IT modernisation strategy? What key performance
+indicators (KPIs) will we track to demonstrate the positive impact on the business?
+
+
+CAST
+CEO Wimonrat Bhakdijit, an experienced CEO in the fashion industry with an MBA
+from the London Business School, the top institution for MBAs in Europe
+CFO Ang Wang, a licenced accountant, with an MBA from Harvard University
+Past CIO Justin Shanks, a solid IT manager, with a Bachelor of Computer Science from
+Chalmers University of Technology in Sweden
+CIO Sophia Rossi, a renowned IT manager with a Master of Management
+Information Systems from Syracuse University
+Marketing Manager Angus Ruffnut, Master of Marketing, Monash University
+
+ WX：codinghelp
