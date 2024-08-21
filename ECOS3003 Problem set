@@ -1,0 +1,73 @@
+
+ECOS3003 Problem set
+
+Due 23:59, Wednesday 21 August
+
+Please submit a pdf of your answers via the portal on Canvas.
+
+1. Consider two workers 1 and 2 who simultaneously must choose between working on two projects,
+labelled A and B. The payoffs are as follows. If both 1 and 2 choose project A each worker gets 0.
+Similarly, if both workers choose B each gets 0. If worker 1 chooses B and worker 2 chooses A, each
+gets 10 and 3 (for worker 1 and 2) respectively. Finally, if 1 opts for A and worker 2 opts for B the
+payoffs to worker 1 and 2 are 8 and 7, respectively.
+a. What are the Nash equilibria of the game? Is this game a realistic one for an organisation? Explain
+your answer. What might an organisation do if it found itself in a situation similar to the one
+represented by this game.
+b. Now allow the game to be played sequentially. That is, allow worker 1 to make her choice first
+between projects A and B. Then, worker 1 choice is observed by worker 2 who then makes his choice.
+What are the subgame perfect equilibria of the game? Provide some intuition for your result. What
+does your say about the Coase theorem?
+
+2. Consider a firm in which a boss and a worker each simultaneously get to choose their actions. The
+boss can choose between centralizing (C) or delegating (D). The worker can put in low effort (L) or high
+effort (H). The payoffs are 2 to the boss and 2 to the worker if the choices are C and L. If the boss
+chooses D and the worker L the payoffs are (1,6) to the boss and worker, respectively. If the actions
+chosen are C and H the payoff are (6, 1). Finally, if the actions are D and H, the payoffs are 4 apiece.
+a. If the game is played once, what is the Nash equilibrium. Explain your answer. Could this represent
+an outcome in a real firm?
+b. What if the worker and boss meet twice, in which in the first period both make their choice of action
+simultaneously. Following this, the outcome (and payoffs) is revealed and the game proceeds to the
+next and final period. In the second period, again the parties simultaneously choose their actions, the
+payoffs are revealed and the game ends. What outcome do we see in both periods in the subgame
+perfect equilibria and why?
+c. Now assume that instead of meeting once or twice, the two players play the simultaneous-choice
+stage game an infinite number of times. In each period, the two players simultaneously make their
+choices, the outcome in that period is revealed to all and the players proceed to the next period. Each
+party discounts future periods by a discount factor 汛, where 0 ≒ 汛 ≒ 1.
+Assume that each party adopts a trigger strategy that involves: choose either D or H in the first period
+(depending on the player); in any subsequent period, choose either D or H if the outcome in every
+previous period was (D, H);ECOS3003 代做、代写 Java，Python 程序设计 if not, choose C or L (for the boss and worker respectively).
+Can this trigger strategy support an outcome of (D, H) in every period? Recent research by Meagher
+and Wait (2020) found that if workers trust their managers that delegation of decision making is more
+likely and that workers tend to trust their managers less the longer the worker has been employed by
+a particular firm (that is, worker trust in their manager is decreasing the longer the worker＊s tenure)
+Interpret these results in the context of the infinitely repeated game studied in class. What are some
+possible empirical issues related to interpreting these results?
+
+3. Consider a firm wishing to use the services of a consultant. The marginal benefit for the firm is given
+by MB = 120 每 q, where q is the quantity of services provided. The marginal cost of those services for
+the consultant is given by MC = 2q. The issue for the parties is that it is difficult to verify the actual
+quantity of consulting services provided. To help mitigate this the firm can hire an auditor at a cost of
+$100. Similarly, the consultant can use some recording keeping techniques that cost $200. Even with
+both of these actions, if the consultant provides less than 60 units of the service it will look like zero
+quantity was provided to a third party (like a court enforcing the contract). What is the total agency
+cost in this case? Using the help of a diagram, explain your answer. What if the auditing service instead
+cost the firm $1000 and the record keeping technology cost the consultant $1000 每 what would the
+total agency cost be in this case? Explain your answer.
+
+4. Consider the following simultaneous stage game that is play twice. That is, there are two periods,
+and in each period the two players choose their actions simultaneously. The outcome in the first
+period is revealed before the players make their choices in the second period. Outline how in a
+subgame perfect equilibrium, it is possible to get (B, B) as the choice made in the first period. Explain
+the relevance to trust in organisations.
+
+5. What is the Basic Value Maximisation principle? What does this principle suggest about the way
+organizations operate? What does this mean for economists studying organisations?
+
+6. Design and solve a one-period game with two players who each have two possible actions. Assume
+the players make their respective choices of actions simultaneously. Design your game so that there
+are three Nash equilibria (at least). After solving the Nash equilibria of the game, interpret your game
+in the context of corporate culture.
+,
+
+ WX：codinghelp
