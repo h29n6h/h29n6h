@@ -1,0 +1,237 @@
+ COMP90025 Parallel and multicore computing
+Project 1: Spell checker — identifying words
+Project 1 requires developing and submitting a C/C++ OpenMP program and a written
+report. Project 1 is worth 20% of the total assessment and must be done individually. The due
+date for the submission is nominally 11.59pm on 11 September, the Wednesday of Week 8.
+Submissions received after this date will be deemed late. A penalty of 10% of marks per working
+day late (rounded up) will be applied unless approved prior to submission. The weekend does not
+count as working days. A submission any time on Thursday will attract 10% loss of marks and so
+on. Please let the subject coordinator know if there is anything unclear or of concern about these
+aspects.
+1 Background
+We have all come to rely on spelling checkers, in everything from word processors to web forms
+and text messages. This year’s projects will combine to form a simple parallel spell checker.
+In Project 1, you will write OpenMP (shared memory) code to collect a list of distinct words
+from a document, ready to check the spelling of each. In Project 2, you will write MPI (message
+passing) code to take such a list of words and check them against a dictionary of known words.
+2 Assessment Tasks
+1. Write an OpenMP (or pthreads) C/C++ function
+void WordList(uint8_t *doc, size_t doc_len, int non_ASCII, uint16_t ***words, int *count)
+to do the following:
+(a) take a pointer doc to a UTF-8 string and its length, doc len;
+(b) parse the string into a list of words, where a word is defined as a maximal string of
+characters that are Unicode letter type, as determined by iswalnum (or isalnum for
+ASCII) in the current locale (not necessarily the standard C locale).
+That is, it is a string of Unicode letters that
+? is either preceded by a non-letter or starts at the start of the string; and
+? is either followed by a non-letter or ends at the end of the string;
+The function should malloc two regions of memory: one containing all of the (‘\0’-
+terminated) words contiguously, and the other containing a list of pointers to the starts
+of words within the first region. A pointer to the second should be returned in words.
+The memory should be able to be freed by free (**words); free (*words);
+(c) set *count to the number of distinct words.
+The array should be sorted according to the current locale. The C function strcoll compares
+according to the current locale. We will test with locales LC ALL=C, en AU. In bash, the locale
+can be specified on the command line, like
+1
+LC ALL=en AU run find words text1-ASCII.txt
+LC ALL=en AU run find words text1-en.txt
+or it can be specified using export
+export LC ALL=en AU
+run find words text1-ASCII.txt
+run find words text1-en.txt
+There should be no spaces around the “=”.
+If nonASCII is zero, then you can assume that the UTF-8 input is all ASCII, and optimize
+for that case. If nonASCII is 1, then you can assume that non-ASCII characters are rare.
+If nonASCII is 2, then non-ASCII characters may be common. This is not required, unless
+you are aiming to get the fastest possible code.
+You must write your own sorting code. (Choose a simple algorithm first, and replace it if
+you get time.)
+Do not use any container class libraries.
+You can assume that all UTF-16 characters fit into a single uint16_t.
+The driver program to call your code, and a skeleton Makefile, are available at https:
+//canvas.lms.unimelb.edu.au/files/20401320/download?download_frd=1 and on
+Spartan at /data/projects/punim0520/2024/Project1.
+2. Write a minor report (3000 words (+/- 30%) not including figures, tables, diagrams, pseu-
+docode or references). The lengths given below are guidelines to give a balanced report; if
+you have a good reason to write more or less, then you may. Use the following sections and
+details:
+(a) Introduction (400 words): define the problem as above in your own words and discuss
+the parallel technique that you have implemented. Present the technique using parallel
+pseudo-code. Cite any relevant literature that you have made use of, either as a basis
+for your code or for comparison. This can include algorithms you chose not to use along
+with why you didn’t use them. If you use an AI assistant like ChatGPT, then clearly
+identify which text was based on the AI output, and state in an appendix what prompt
+you used to generate that text.
+(b) Methodology (500 words): discuss the experiments that you will use to measure the per-
+formance of your program, with mathematical definitions of the performance measures
+and/or explanations using diagrams, etc.
+(c) Experiments (500 words): show the results of your experiments, using appropriate
+charts, tables and diagrams that are captioned with numbers and referred to from the
+text. The text should be only enough to explain the presented results so it is clear what
+is being presented, not to analyse result.
+(d) Discussion and Conclusion (1600 words): analyze your experimental results, and dis-
+cuss how they provide evidence either that your parallel techniques were successful or
+otherwise how they were not successful or, as may be the case, how the results are
+inconclusive. Provide and justify, using theoretical reasoning and/or experimental evi-
+dence, a prediction on the performance you would expect using your parallel technique
+if the number of threads were to increase to a much larger number; taking architectural
+aspects and technology design trends into account as best as you can – this may require
+some speculation.
+For each test case, there will be a (generous) time limit, and code that fails to complete
+in that time will fail the test. The time limit will be much larger than the time taken
+by the sequential skeleton, so it will only catch buggy implementations.
+2
+(e) References: cite literature that you have cited in preparing your report.
+Use, for example, the ACM Style guide at https://authors.acm.org/proceedings/produc
+tion-information/preparing-your-article-with-latex for all aspects of formatting your
+report, i.e., for font size, layout, margins, title, authorship, etc.
+3 Assessment Criteria
+Your code will be tested on代写 COMP90025 Parallel and multicore computing Spartan. Although you are welcome to develop on your own
+system if that is convenient, it must compile and run on Spartan to get marks for “speed” and
+“correctness” (see below).
+Assessment is divided between your written report and the degree of understanding you can
+demonstrate through your selection and practical implementation of a parallel solution to the
+problem. Your ability to implement your proposed parallel solution, and the depth of understand-
+ing that you show in terms of practical aspects, is called “software component”. In assessing the
+software component of your project the assessor may look at your source code that you submit
+and may compile and run it to verify results in your report. Programs that fail to compile, fail
+to provide correct solutions to any problem instances, and/or fail to provide results as reported
+may attract significant loss of marks. The remaining aspects of the project are called “written
+report”. In assessing the written report, the assessor will focus solely on the content of the written
+report, assessing a range of aspects from presentation to critical thinking and demonstration of a
+well designed and executed methodology for obtaining results and drawing conclusions.
+The assessment of software component and written report is weighted 40/60, i.e., 40% of the
+project marks are focussed on the software component (mostly for speed and correctness) and 60%
+of the project marks are focussed on the written report.
+Assessing a written report requires significant qualitative assessment. The guidelines applied
+for qualitative assessment of the written report are provided below.
+4 Quality Assessment Guidelines
+A general rubric that we are using in this subject is provided below. It is not criteria with each
+criterion worth some defined points. Rather it is a statement of quality expectations for each
+grade. Your feedback for your written assessment should make it clear, with respect to the quality
+expectations below, why your submission has received a certain grade, with exact marks being
+the judgement of the assessor. Bear in mind that for some assignments, independent discussions
+(paragraphs) in the assignment may be attracting independent assessment which later sums to
+total the final mark for the assignment. As well, please bear in mind that assessors are acting more
+as a consistent reference point than as an absolute authority. Therefore while you may disagree
+with the view point of the assessor in the feedback that is given, for reasons of consistency of
+assessment it is usually the case that such disagreement does not lead to changes in marks.
+Quality expectations:
+Marks will be awarded according to the following rubric.
+Speed (20%)
+H1 Speed-up likely to be O(p/ log(p)) for p processors for sufficiently large prob-
+lems. Probably faster with two processors than the best sequential algorithm.
+Among the fastest in the class.
+H2 Speed-up likely to be O(√n) for sufficiently large problems Faster than most
+submissions
+H3 Some speedup for large problems and large numbers of processors
+P Performance is similar to a sequential algorithm.
+N Markedly slower than a good sequential implementation.
+3
+Evaluation set-up (30%)
+H1 Thorough and well-focused testing for correctness. Thorough and well-focused
+tests of scalability with problem size. Thorough and well-focused tests of scal-
+ability with number of processors. Good choice of figures and tables. Reports
+on times of appropriate sub-tasks. Good choice of other tests in addition to
+scaling
+H2 Makes a reasonable effort at all of the above, except perhaps “other tests”. Test
+probably less well focused (testing things that don’t matter, and/or missing
+things that do). Reports on times of some sub-tasks.
+H3 At least one class of evaluation is absent or of poor quality
+P Basic testing and evaluation. Probably one or two well-chosen graphs, or
+multiple less-suitable graphs
+N Major problems with evaluation methodology: insufficient, unclear or mislead-
+ing
+Discussion (30%)
+H1 Excellent. Clearly organised, at the level of subsections, paragraphs and sen-
+tences. Insightful. Almost no errors in grammar, spelling, word choice etc..
+You Show potential to do a research higher degree.
+H2 Very good. Clear room for improvement in one of the areas above.
+H3 Good. Discussion addresses the questions, but may be unclear, missing impor-
+tant points and/or poorly expressed.
+P Acceptable, but with much room for improvement. Discussion may not address
+important aspects of the project, or may have so many errors that it is difficult
+to follow.
+N
+Correctness (20%)
+Your code is expected to be correct. Unlike other in categories, you can get
+negative marks for having wildly incorrect results.
+20 Correct results
+15 One error, or multiple errors with a clear explanation in the text
+0–14 Multiple errors with inadequate explanation
+-10– -0 Major errors
+-20– -10 May crash, give completely ridiculous results or fail to compile
+When considering writing style, The “Five C’s of Writing” is adapted here as a guideline for
+writing/assessing a discussion:
+Clarity - is the discussion clear in what it is trying to communicate? When sentences are vague
+or their meaning is left open to interpretation then they are not clear and the discussion is
+therefore not clear.
+Consistency - does the discussion use consistent terminology and language? If different terms/
+language are/is used to talk about the same thing throughout the discussion then it is not
+consistent.
+Correctness - is the discussion (arguably) correct? If the claims in the discussion are not logically
+sound/reasonable or are not backed up by supporting evidence (citations), or otherwise are
+not commonly accepted, then they are not assumed to be correct.
+Conciseness - is the discussion expressed in the most concise way possible? If the content/
+meaning/understanding of the discussion can be effectively communicated with less words,
+then the discussion is not as concise as it could be. Each sentence in the discussion should
+be concisely expressed.
+Completeness - is the discussion completely covering what is required? If something is missing
+from the discussion that would have significant impact on the content/meaning/understanding
+4
+of what it conveys, then the discussion is incomplete.
+5 Submission
+Your submission must be via Canvas (the assignment submission option will be made available
+closer to the deadline) and be either a single ZIP or TAR archive that contains the following files:
+? find words.c or find words.cc: Ensure that your solution is a single file, and include com-
+ments at the top of your program containing your name and student number, and examples
+of how to test the correctness and performance of your program, using additional test case
+input files if you require.
+? Makefile: A simple makefile to compile your code, and link it to the driver run find words.c
+provided.
+? find words.slurm: A SLURM script to run your code on Spartan.
+? Report.pdf: The only acceptable format is PDF.
+? test case inputs: Any additional files, providing test case inputs, that are needed to follow
+the instructions you provide in your solution’s comments section. (Note that we will also
+test your code on our own test cases to check for correctness.)
+6 Other information
+1. AI software such as ChatGPT can generate code, but it will not earn you marks. You
+are allowed to use tools like ChatGPT, but if you do then you must strictly adhere to the
+following rules.
+(a) Have a file called AI.txt
+(b) That file must state the query you gave to the AI, and the response it gave
+(c) You will only be marked on the differences between your final submission and the AI
+output.
+If the AI has built you something that gains you points for Task 1, then you will not
+get points for Task 1; the AI will get all those points.
+If the AI has built you something that gains no marks by itself, but you only need to
+modify five lines to get something that works, then you will get credit for identifying
+and modifying those five lines.
+(d) If you ask a generic question like “How do I control the number of threads in OpenMP?”
+or “What does the error ‘implicit declaration of function rpc close server’ mean?” then
+you will not lose any marks for using its answer, but please report it in your AI.txt file.
+If these rules seem too strict, then do not use generative AI tools.
+2. There are some sample datasets in /data/projects/punim0520/2024/Project1, which you
+can use for debugging. Most are too small to use to test timing, but you can extract long
+sequences from abstractsi 1-1166.txt.gz, which are the abstracts from articles in medical
+journals.
+You do not need to copy these to your home directory. You can either specify the full path
+on the command line, or create a “symbolic link”, which makes it appear that the file is in
+your directory, with the command
+ln -s ?full path? .
+5
+where the final “.” means “the current directory”. It can be replaced by a filename. If you
+run with a large input file, please remember to delete the output file once you are finished
+with it.
+3. If you want to use prefix sum (I would), you can use the OpenMP 5.0 “scan” directive. A
+simple example is given at https://developers.redhat.com/blog/2021/05/03/new-fea
+tures-in-openmp-5-0-and-5-1 Implement all other parallel algorithms yourself.
+4. You can ignore Unicode codepoints that require more than 16 bits in UTF-16.
+5. When describing speed-up, remember that this is defined relative to the speed of the best
+possible sequential algorithm, not your chosen algorithm run with a single thread.
+6. It is good to show a breakdown of the time spent in various components.
+7. Your submission will be evaluated on ASCII text, French Unicode text (mostly ASCII but
+with some non-ASCII characters) and Hindi text (mostly non-ASCII). How can you use that
+knowledge to help you write faster code?
+ WX：codinghelp
